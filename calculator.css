@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #616060eb;
+  color: #222;
+}
+
+.screen {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+.nav {
+  font-size: 2.3vh;
+  color: #999898;
+  padding: 1vh 0;
+}
+
+.top-right {
+  position: absolute;
+  top: 2vh;
+  right: 4vw;
+  font-size: 4vh;
+  cursor: pointer;
+}
+
+.top-right a {
+  text-decoration: none;
+  color: #222;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 65vh;
+  background: #ebebeb;
+  border-radius: 2vh;
+  box-shadow: 0 0.8vh 1.2vh rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  font-size: 2.3vh;
+  font-weight: 600;
+  padding: 2.5vh 0;
+}
+
+.display {
+  font-size: 5vh;
+  text-align: right;
+  margin: 2vh 5vw;
+  color: #333;
+}
+
+.main-keyboard {
+  background: #f6f5f5;
+  border-radius: 0 0 2vh 2vh;
+}
+
+.keyboard {
+  padding: 2vh 0;
+}
+
+.row {
+  margin-bottom: 2vh;
+}
+
+.key {
+  display: inline-block;
+  width: 20vw;
+  height: 8vh;
+  line-height: 8vh;
+  background: white;
+  border-radius: 1vh;
+  font-size: 3.5vh;
+  font-weight: 550;
+  margin: 1vw;
+}
+
+.key.small2 {
+  background: #f6f5f5;
+}
+
+.done {
+  width: 60%;
+  height: 8vh;
+  line-height: 8vh;
+  background: rgb(238, 178, 65);
+  border: 0.4vh solid rgb(39, 255, 35);
+  font-size: 3vh;
+  margin: 2vh auto;
+}
+
+.done a {
+  text-decoration: none;
+  color: black;
+}
