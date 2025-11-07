@@ -1,16 +1,27 @@
-# React + Vite
+# 💰 Tip Calculator (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **Tip Calculator UI** built with **React and Vite**.  
+It allows users to easily calculate and enter tip amounts — either by selecting a percentage or manually entering a custom amount using an on-screen calculator.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## React Compiler
+- 💵 **Editable Subtotal Input**  
+  - Only accepts numeric input.  
+  - Always shows a `$` sign before the value.  
+  - Automatically recalculates tip amounts when subtotal changes.  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🧮 **Manual Tip Entry (Calculator Modal)**  
+  - Users can open a calculator to manually enter a custom tip.  
+  - “Done” applies the tip; “Cancel” closes the modal without changes.  
 
-## Expanding the ESLint configuration
+- 🔄 **Live Tip Calculation**  
+  - Tip amounts for **15%**, **20%**, and **25%** update dynamically.  
+  - Displays consistent currency formatting (two decimal places).  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🎨 **Clean & Simple UI**  
+  - Neat layout using basic CSS (no media queries or complex responsiveness).  
+  - Styled with modern design principles using the Poppins font and Font Awesome icons.  
+
+
