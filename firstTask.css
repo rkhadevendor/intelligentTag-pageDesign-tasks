@@ -5,7 +5,6 @@
   transition: all 0.15s linear;
 }
 
-/* Base styles */
 html, body {
   height: 100%;
   width: 100%;
@@ -16,7 +15,6 @@ html, body {
   text-align: center;
 }
 
-/* Navbar */
 nav {
   position: fixed;
   top: 0;
@@ -33,10 +31,10 @@ nav {
 
 nav .back-btn {
   position: absolute;
-  left: 3vw;
-  top: 50%;
+  left: -12vw;
+  top: 75%;
   transform: translateY(-50%);
-  font-size: 3vh;
+  font-size: 5vh;
 }
 
 nav .nav-text {
@@ -44,7 +42,6 @@ nav .nav-text {
   font-size: 1.3vh;
 }
 
-/* Main content */
 .main {
   width: 100%;
   max-width: 85vw;
@@ -52,10 +49,9 @@ nav .nav-text {
   padding: 1.5vh 2vw;
 }
 
-/* Container 1 */
 .container1 .subtotal {
   font-size: 3.5vh;
-  font-weight: 400;
+  font-weight: 100;
 }
 
 .container1 .tip {
@@ -64,30 +60,32 @@ nav .nav-text {
   margin-top: 0.5vh;
 }
 
-/* Container 2 */
 .container2 {
-  margin-top: 2.5vh;
+  margin-top: 6vh;
 }
 
 .container2 .amount-text {
   font-size: 3vh;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .container2 .amount {
   margin: 1.2vh auto 1vh;
-  height: 6vh;
-  width: 20vw;
+  height: 7vh;
+  width: 65vw;
   border: 0.3vh solid rgb(240, 191, 99);
   border-radius: 0.6vh;
-  font-size: 4vh;
+  font-size: 5vh;
   font-weight: 600;
   text-align: right;
   padding-right: 1vw;
 }
 
+.container2 .amount .small1 {
+  vertical-align: top;
+  padding-right: 1.5vh;
+}
 
-/* Container 3 */
 .container3 {
   margin-top: 2.2vh;
   white-space: nowrap;
@@ -102,7 +100,6 @@ nav .nav-text {
   border-radius: 50%;
   background-color: rgb(246, 182, 62);
   vertical-align: middle;
-  
 }
 
 .container3 .percentage .big {
@@ -112,12 +109,20 @@ nav .nav-text {
   margin-top: 1vh;
 }
 
+.container3 .percentage .big a {
+  color: #222;
+  text-decoration: none;
+}
+
 .container3 .percentage .small {
   font-size: 1.3vh;
   line-height: 0;
 }
 
-/* Container 4 */
+.container3 .percentage .other {
+  padding-top: 1vh;
+}
+
 .container4 {
   margin-top: 2.8vh;
 }
@@ -125,13 +130,14 @@ nav .nav-text {
 .container4 .tip {
   background-color: rgb(246, 182, 62);
   border: 0.4vh solid rgb(57, 222, 60);
-  height: 6vh;
-  width: 40%;
+  height: 8vh;
+  width: 100%;
   margin: 0 auto;
   display: inline-block;
   line-height: 6vh;
   font-weight: 400;
-  font-size: 3vh;
+  font-size: 5vh;
+  padding-top: 0.7vh;
 }
 
 .container4 .dic {
@@ -140,13 +146,12 @@ nav .nav-text {
   margin-top: 0.8vh;
 }
 
-/* Footer */
 .footer {
   position: fixed;
-  bottom: 0;
-  left: 50%;
+  bottom: -1.5vh;
+  left: 40%;
   transform: translateX(-50%);
-  width: 80%;
+  width: 100%;
   max-width: 85vw;
   background: #fff;
   padding: 2vh 2vw;
@@ -158,7 +163,8 @@ nav .nav-text {
 .footer .right {
   display: flex;
   gap: 1.5vw;
-  vertical-align: middle;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .footer .left-icon {
@@ -167,31 +173,80 @@ nav .nav-text {
 
 .footer .right {
   float: right;
+  font-size: 1.3vh;
+  position: relative;
+  left: 25%;
 }
 
 .footer .left-icon .calculator,
 .footer .right .text {
-  height: 4vh;
-  width: 4vh;
+  height: 7vh;
+  width: 7vh;
   background: rgb(246, 182, 62);
-  border-radius: 1vh;
   display: inline-block;
   line-height: 4vh;
-  font-size: 2vh;
+  font-size: 4vh;
+  font-weight: 100;
+  text-align: center;
+  padding-top: 1.5vh;
 }
 
-.footer .left-icon button {
-  height: 3vh;
-  width: 6vw;
-  background-color: rgb(246, 182, 62);
-  border: none;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.footer .right .info {
-  color: gray;
-  font-size: 1.4vh;
+.reset-link {
   display: inline-block;
-  margin-right: 1vw;
+  height: 3.4vh;
+  width: 7vh;
+  text-align: center;
+  line-height: 3.4vh;
+  background-color: rgb(246, 182, 62);
+  font-weight: 100;
+  text-decoration: none;
+  color: black;
+  font-size: 1.6vh;
+}
+
+.calc-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.35);
+  z-index: 9999;
+}
+
+.calc-overlay:target {
+  display: flex;
+}
+
+.calc-card {
+  width: 100vw;
+  max-width: 520px;
+  height: 100vh;
+  background: transparent;
+  position: relative;
+  border-radius: 1vh;
+  overflow: hidden;
+  box-shadow: 0 0.8vh 1.2vh rgba(0,0,0,0.25);
+}
+
+.calc-close {
+  position: absolute;
+  right: 1vh;
+  top: 1vh;
+  text-decoration: none;
+  color: #d7d3d3;
+  font-size: 3.5vh;
+  font-weight: 200;
+  background: transparent;
+  z-index: 2;
+}
+
+.calc-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
 }
